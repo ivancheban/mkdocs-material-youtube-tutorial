@@ -35,6 +35,7 @@ theme:
       accent: lime
 plugins:
   - mike
+  - search
 extra:
   version:
     provider: mike
