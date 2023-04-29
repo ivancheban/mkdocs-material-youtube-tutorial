@@ -1,11 +1,18 @@
-site_name: MkDocs YouTube Tutorial
+site_name: MkDocs Material
+nav:
+    - Introduction: 'index.md'
+    - User Guide:
+        - 'Test': 'test-folder/test.md'
+        - 'Test 1': 'test-folder/test1.md'
+        - 'Test 2': 'test-folder/test2.md'
+    - About:
+        - 'About this site': 'about.md'
 theme:
   name: material
+  logo: img/logo.svg
+  favicon: img/favicon.ico
   features:
-    - navigation.tabs
-    - navigation.sections
     - toc.integrate
-    - navigation.top
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -29,18 +36,24 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/james-willett
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/TheJamesWillett
+      link: https://github.com/ivancheban
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/willettjames/
+      link: https://linkedin.com/in/ivan-cheban-a24b576
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.arithmatex:
       generic: true
   - footnotes
@@ -53,4 +66,4 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+  &copy; 2023 <a href="https://github.com/ivancheban"  target="_blank" rel="noopener">Ivan Cheban</a>

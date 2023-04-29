@@ -1,68 +1,72 @@
-# Homepage
+# Introduction
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is Ivan Cheban's test MkDocs site.
 
-## Code Annotation Examples
+!!! note
 
-### Codeblocks
+    This is work in progress.
 
-Some `code` goes here.
+![img](img/download-vscode.png)
 
-### Plain codeblock
 
-A plain codeblock:
+## Tabs
 
-```
-Some code here
-def myfunction()
-// some comment
-```
+=== "Windows"
+    Markdown **content**.
 
-#### Code for a specific language
+    Multiple paragraphs.
 
-Some more code with the `py` at the start:
+=== "Linux"
+    More Markdown **content**.
 
-``` py
-import tensorflow as tf
-def whatever()
-```
+    - list item a
+    - list item b
 
-#### With a title
+## Code blocks
 
-``` py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+```json
+{
+  "name": "Ivan",
+  "last name": "Cheban",
+  "age": 42
+}
 ```
 
-#### With line numbers
+## Flow charts
 
-``` py linenums="1"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
 ```
 
-#### Highlighting lines
+## ERD diagrams
 
-``` py hl_lines="2 3"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` mermaid
+erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  LINE-ITEM {
+    string name
+    int pricePerUnit
+  }
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 ```
 
-## Icons and Emojs
+## Sequence diagrams
 
-:smile: 
-
-:fontawesome-regular-face-laugh-wink:
-
-:fontawesome-brands-twitter:{ .twitter }
-
-:octicons-heart-fill-24:{ .heart }
+``` mermaid
+sequenceDiagram
+  autonumber
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
