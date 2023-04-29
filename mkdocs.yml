@@ -1,4 +1,5 @@
 site_name: MkDocs Material
+site_url: https://ivancheban.github.io/mkdocs-material-youtube-tutorial/
 nav:
     - Introduction: 'index.md'
     - User Guide:
